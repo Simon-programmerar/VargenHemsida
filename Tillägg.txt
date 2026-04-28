@@ -1,0 +1,268 @@
+/* nav display med flex */ 
+
+.nav{
+    display: flex;
+    position: sticky;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4A342E;
+    list-style-type: none;
+}
+.nav ul{
+    display: flex;
+    color:aliceblue;
+    gap: 130px;
+    text-decoration: none;
+    list-style-type: none;
+    float: left;
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nav a{
+    font-size: medium;
+}
+
+.nav-logo img{
+    height: 55px;
+    width: 80px;
+    margin: 15px;
+    margin-left: 20px
+}
+
+.nav-search-icon img{
+    height: 20px;
+    width: 35px;
+}
+
+.nav-language-icon img{
+    height: 20px;
+    width: 35px;
+    margin-right: 5px;
+    margin-bottom: 50px;
+}
+.nav a:hover{
+    color: whitesmoke
+}
+
+
+
+
+/*Css slideshow med knappar*/
+
+
+
+
+
+.main{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.start-slideshow{
+    display: flex;
+    min-height: 500px;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.title{
+    text-align: center;
+    top: 20px;
+    position: absolute;
+    z-index: 10;
+}
+
+.slider-container{
+    position: relative;
+    overflow:hidden;
+    width: 100%;
+    height: 500px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mySlides{
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.mySlide{
+    height:100%;
+    min-width: 100%;
+}
+
+.mySlide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+}
+
+.prev, .next{
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    z-index: 10;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+}
+
+.prev{left:10px}
+.next{right:10px}
+
+.prev:hover, .next:hover{
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.prev img, .next img{
+    height: 120px;
+    width: 120px;
+}
+
+.om-vargen p{
+    grid-column: 1;
+    color:black
+}
+
+
+
+
+/*html slideshow*/
+
+
+
+
+<!DOCTYPE html/>
+<HTML lang="sv">
+<head> 
+    <meta charset="UTF-8"/>
+    <meta name = "description" content = "En sida om Vargen Fjällanläggning"/>
+    <meta name = "keywords" content = "vargen, fjällen, skidor, boka"/>
+    <meta name = "author" content = "Simon Jonsson" />
+    <title>Vargen fjällanläggning</title>
+    <link rel="stylesheet" href="Global-stilmall-U3.css" type="text/css">
+    <link rel="stylesheet" href="Stilmall-index.css" type="text/css">
+
+</head>
+
+<!--MENY_NAVIGATION-->
+<body>
+    <nav class="nav">
+            <a class="nav-logo" href="index.html">
+                <img src="VargenLogga.png">
+            </a>
+        
+        <ul>
+            <li class="restaurang">
+                <a href = "restaurang.html">
+                    <img class=nav-icons src=restaurant.svg alt="restaurant-icon">
+                    <span>Restaurang</span>
+                </a>
+            </li>
+
+            <li class="bokning">
+                <a href = "bokning.html">
+                    <img class="nav-icons" src="chalet.svg" alt="chalet-icon">
+                    <span>/</span>
+                    <img class="nav-icons" src="skiing.svg" alt="skiing-icon">
+                    <span>Bokning</span>
+                </a>
+            </li>
+
+            <li class="allservice">
+                <a href = "allservice.html">
+                    <img class="nav-icons" src="handyman.svg" alt="handyman-icon">
+                    <span>Allservice</span>
+                </a>
+            </li>
+            
+            <li class="om-oss">
+                <a href = "om-oss.hmtl">Om oss</a>
+            </li>
+        </ul>
+
+        <div class="nav-search">
+            <img class="search-icon" src="search.svg" alt="search-icon">
+            <input class="search-bar" type="search" placeholder="Sök">
+        </div>
+
+        <a class="nav-language-icon" href = "#">
+            <img src="språkfunktion.png">
+        </a> 
+    </nav>
+    
+    <!--HUVUDSIDAN-->
+    <main class="main"> 
+        <div class="start-slideshow">
+            <h1 class="title">Upplev vargen</h1>
+            <div class="slider-container">
+                <div class="mySlides">
+                    <div class="mySlide"><img src="testbild1.jpg" alt="image 1"></div>
+                    <div class="mySlide"><img src="testbild2.jpg" alt="image 2"></div> 
+                    <div class="mySlide"><img src="testbild3.jpg" alt="image 3"></div> 
+                </div>
+                
+                <button class="prev"> 
+                <img src="chevron_left.svg" alt="chevron-left">
+                </button>
+                
+                <button class="next"> 
+                <img src="chevron_right.svg" alt="chevron-right">
+                </button>
+
+            </div>
+        </div>
+        
+        
+        <div class="om-vargen">
+            <h2>Kort om vargen</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+    </main>
+
+
+<!--AVSLUT-->    
+    <footer class="footer">
+        
+        <div class="contact">
+            <h3>Kontakta oss</h3>
+            <p>Telefon - 070######</p>
+            <p>Email - <a href = john.doe@gmail.com>john.doe@gmail.com</a></p>
+        </div>
+
+        <div class="socials">
+            <h3>Sociala medier</h3>
+            <p><a href = Instagram>Instagram</a></p>
+            <p><a href = Facebook>Facebook</a></p>
+            <p><a href = X>X</a></p>
+        </div>
+
+        <div class="open">
+            <h3>Öppettider</h3>
+            <p>Måndag - Torsdag: ##.## - ##.##</p>
+            <p>Fredag - Lördag: ##.## - ##.##</p>
+            <p>Söndag: ##.## - ##.##</p>            
+        </div>
+    
+    </footer>    
+</body>
+</HTML>
