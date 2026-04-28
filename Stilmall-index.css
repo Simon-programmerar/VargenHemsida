@@ -81,7 +81,7 @@ h2{margin: 40px;}
 
 .table-container{
     display: grid;
-    grid-template-columns: repeat(2fr 1fr);
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: repeat(2, auto);
     background-color: #45503B;
     margin: 30px;
